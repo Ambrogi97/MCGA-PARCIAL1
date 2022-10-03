@@ -16,7 +16,7 @@ mongoose
 const app = express();
 
 app.use(express.json());
-
+app.use("/api/products", productRoutes)
 // Ping prueba de estado
 app.get("/api/ping", (req, res) => {
     if (mongoose.connection.readyState === 1) {
